@@ -46,17 +46,17 @@ Vagrant.configure('2') do |config|
      
 	config.vm.define :web1 do |machine1|
         machine1.vm.host_name = "web1.local"
-        machine1.vm.network "private_network", ip: "192.168.10.240"
+        machine1.vm.network "private_network", ip: "192.168.10.243"
         machine1.vm.provision "shell", inline: $useraddscript
 		machine1.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
-		machine1.vm.synced_folder "DevOps4.2/", "/home/vagrant/mission"
+		machine1.vm.synced_folder "DevOps4.3/", "/home/vagrant/mission"
 	end
 	config.vm.define :web2 do |machine2|
         machine2.vm.host_name = "web2.local"
-        machine2.vm.network "private_network", ip: "192.168.10.241"
+        machine2.vm.network "private_network", ip: "192.168.10.244"
         machine2.vm.provision "shell", inline: $useraddscript
 		machine2.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;", run: "always"
-		machine2.vm.synced_folder "DevOps4.2/", "/home/vagrant/mission"
+		machine2.vm.synced_folder "DevOps4.3/", "/home/vagrant/mission"
 	end
 end
 
