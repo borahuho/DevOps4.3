@@ -1,0 +1,16 @@
+
+Systemhardening
+
+###################################
+
+Do this on both (Web1 and Web2) servers!
+
+##############################
+
+Write down all commands you used.
+
+
+
+
+
+
