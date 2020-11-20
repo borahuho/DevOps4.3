@@ -29,7 +29,9 @@ chgrp operators /operators
 chown henk:administratie /administratie
 chown henk:administratie /administratie/loon
 chown henk:administratie /administratie/klanten
-
+chmod 770 /operators
+chmod 770 /administratie
+chmod 774 /administratie/loon 
 
 SCRIPT
 
